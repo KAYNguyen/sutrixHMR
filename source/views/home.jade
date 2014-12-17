@@ -1,17 +1,26 @@
 extends layouts/layout
 
 block vars
-	-title='Homepage'
+  -title='Homepage'
 
 block container
-	.inner
-		section#main
-			.row
-				.large-6.column
-					label Username
-				.large-6.column
-					input(type="text")
-				.large-6.column
-					label Password
-				.large-6.column
-					input(type="password")
+  .inner
+    section#main
+      form(id="form-login", name="form-login", action="#", method="post")
+        fieldset
+          .row
+            .small-6.small-centered.column
+              .row
+                .small-2.column
+                   label Username
+                .small-10.column
+                  input(type="text")
+          .row
+            .small-6.small-centered.column
+              .row
+                .small-2.column
+                  label Password
+                .small-10.column
+                  input(type="password")
+          .text-center
+            a(href="#", class="button small") ok
